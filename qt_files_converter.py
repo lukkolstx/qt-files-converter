@@ -5,6 +5,7 @@ import argparse
 TIME_CODE_PATTERN = re.compile(r'^\[\d+:\d+:\d+\.\d+\]$', re.M)
 QT_FILENAME_PATTERN = re.compile(r'^Job_(.*)\.mp4.*$')
 TEMPLATE_PATTERN = re.compile(r'\{file_name\}')
+BLANK_AUDIO_PATTERN = re.compile(r'\[BLANK_AUDIO\]')
 
 
 def get_smil_template(path):
@@ -45,7 +46,7 @@ def converter(path):
 
             with open(qt_file_path, 'r') as qt_file:
                 for line in qt_file:
-                    line = line.replace('[BLANK_AUDIO]', '')
+                    line = BLANK_AUDIO_PATTERN.sub('', line)
                     is_time_code = TIME_CODE_PATTERN.search(line)
                     if is_time_code:
                         is_caption_text = not is_caption_text
@@ -59,8 +60,6 @@ def converter(path):
             with open(caption_file_path, 'w') as caption_file:
                 caption_file.writelines(output)
             os.remove(qt_file_path)
-    print 'End of modifications'
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
