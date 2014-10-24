@@ -6,7 +6,6 @@ setup(
     description='Converts .qt files',
     author='Lukasz Kolat',
     author_email='lukasz.kolat@stxnext.com',
-    packages=['QTconverter'],
-    package_dir={'': '..'},
-    zip_safe=False
+    zip_safe=False,
+    test_suite='tests',
 )
