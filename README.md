@@ -10,5 +10,5 @@ with matching parenthesis.
 
 
 Instaltion:
-
+==================
 pip install qt-files-converter
