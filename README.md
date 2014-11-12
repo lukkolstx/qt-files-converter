@@ -9,6 +9,6 @@ with matching parenthesis.
 "[BLANK_AUDIO]" tags and the ending time codes are removed anywhere it appears.
 
 
-Instaltion:
+Instalation:
 ==================
 pip install qt-files-converter
