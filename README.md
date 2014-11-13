@@ -12,3 +12,4 @@ with matching parenthesis.
 Instalation:
 -----------
     $ git clone https://github.com/lukkolstx/qt-files-converter
+    $ python setup.py install
