@@ -1,6 +1,6 @@
 qt-files-converter
 ==================
-    qt-files-converter modifies caption files.
+  qt-files-converter modifies caption files.
 It renames caption file name (eg. Job_XXXX.mp4_5823fb160c8346bc82ec90cc4d4472b1.qt to XXXX.qt.text.)
 and generates XXXX.smil file from template.smil.
 In XXXX.smil file all "{file_name}" tags are replaced into XXXX.
