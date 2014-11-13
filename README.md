@@ -13,3 +13,9 @@ Instalation:
 -----------
     $ git clone https://github.com/lukkolstx/qt-files-converter
     $ python setup.py install
+
+
+Usage:
+-----------
+    import qt_files_converter
+    qt_files_converter.converter('path/to/directory')
